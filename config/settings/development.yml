@@ -1,0 +1,11 @@
+digit:
+  length_60: 60
+  length_140: 140
+  length_15: 15
+  length_30: 30
+  length_1000: 1000
+value:
+  number_0: 0
+regex:
+  email: /\A[\w+\-.]+@[a-z\d-]+(\.[a-z]+)*\.[a-z]+\z/i
+  phone: /\A[0-9+\-\s()]+\z/

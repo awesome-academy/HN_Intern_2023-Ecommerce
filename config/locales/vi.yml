@@ -1,0 +1,17 @@
+vi:
+  appname: "appname"
+  controller:
+    hello: "Chào"
+  view:
+    home: "Trang chủ"
+  model:
+    user:
+      sex:
+        male: "Nam"
+        female: "Nữ"
+        other: "Khác"
+    order:
+      status:
+        pending: "Đang chờ xác nhận"
+        shipped: "Đã được vận chuyển"
+        delivered: "Đã tới nơi"
