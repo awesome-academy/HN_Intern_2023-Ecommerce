@@ -1,5 +1,10 @@
 class Order < ApplicationRecord
-  enum status: [:pending, :shipped, :delivered, :canceled]
+  enum status: {
+    pending: 0,
+    shipped: 1,
+    delivered: 2,
+    canceled: 3
+  }
 
   belongs_to :user
   has_many :order_items, dependent: :destroy
@@ -16,5 +21,5 @@ class Order < ApplicationRecord
   validates :receiver_address, length: {maximum: Settings.digit.length_140}
   validates :status, length: {maximum: Settings.digit.length_30}
 
-  validates :status, inclusion: { in: Order.statuses.keys }
+  validates :status, inclusion: {in: Order.statuses.keys}
 end

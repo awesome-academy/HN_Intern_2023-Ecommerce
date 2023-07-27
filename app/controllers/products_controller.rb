@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    @pagy, @products = pagy Product.newest
   end
 end

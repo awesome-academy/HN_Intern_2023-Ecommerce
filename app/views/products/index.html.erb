@@ -1,1 +1,16 @@
 <% provide :title, t("view.home") %>
+<header>
+  <%= render "layouts/header" %>
+</header>
+
+<section>
+  <div class="container my-5">
+    <header class="mb-4">
+      <h3><%= t "view.products" %></h3>
+    </header>
+  <div class="row">
+    <%== pagy_bootstrap_nav(@pagy) %>
+    <%= render @products %>
+    <%== pagy_bootstrap_nav(@pagy) %>
+  </div>
+</section>

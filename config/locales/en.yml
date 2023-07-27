@@ -4,6 +4,12 @@ en:
     hello: "hello"
   view:
     home: "Home"
+    add_to_cart: "Add to cart"
+    products: "Products"
+    sign_in: "Sign in"
+    cart: "Cart"
+    search: "Search"
+    menu: "Menu"
   model:
     user:
       sex:

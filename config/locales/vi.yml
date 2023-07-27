@@ -4,6 +4,12 @@ vi:
     hello: "Chào"
   view:
     home: "Trang chủ"
+    add_to_cart: "Thêm vào giỏ hàng"
+    products: "Danh sách sản phẩm"
+    sign_in: "Đăng ký tài khoản"
+    cart: "Giỏ hàng"
+    search: "Tìm kiếm"
+    menu: "Tùy chọn"
   model:
     user:
       sex:

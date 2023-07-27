@@ -36,6 +36,10 @@ group :development, :test do
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
 end
+gem "bootstrap", "~> 5.3.0.alpha3"
 gem "config"
+gem "faker"
 gem "figaro", "~> 1.1", ">= 1.1.1"
+gem "jquery-rails"
+gem "pagy"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

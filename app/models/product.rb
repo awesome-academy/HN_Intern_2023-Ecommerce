@@ -2,6 +2,8 @@ class Product < ApplicationRecord
   belongs_to :user
   belongs_to :category
   has_many :order_items, dependent: :destroy
+  has_one_attached :image
+
   validates :name, :price, :description, :quantity_on_stock, presence: true
 
   validates :price,
@@ -12,4 +14,8 @@ class Product < ApplicationRecord
 
   validates :name, length: {maximum: Settings.digit.length_30}
   validates :description, length: {maximum: Settings.digit.length_1000}
+
+  scope :price_ascending, ->{order(price: :asc)}
+  scope :price_descending, ->{order(price: :desc)}
+  scope :newest, ->{order(created_at: :desc)}
 end
