@@ -11,3 +11,11 @@ regex:
   phone: \A[0-9+\-\s()]+\z
 page:
   items_12: 12
+user:
+  roles:
+  - ["Customer", "customer"]
+  - ["Seller", "seller"]
+  genders:
+  - ["Male", "male"]
+  - ["Female", "female"]
+  - ["Other", "other"]

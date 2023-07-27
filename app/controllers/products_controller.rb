@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
     @product = Product.find_by id: params[:id]
     return if @product
 
-    flash[:warning] = t "controller.product.not_found"
+    flash[:warning] = t "controller.products.not_found"
     redirect_to root_path
   end
 end

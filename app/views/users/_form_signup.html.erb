@@ -1,0 +1,51 @@
+<%= form_for @user do |f| %>
+<%= render "layouts/error_messages" %>
+  <div class="form-outline mb-4">
+    <%= f.text_field :name, class: "form-control form-control-lg" %>
+    <%= f.label :name, t("view.your_name"), class: "form-label" %>
+  </div>
+
+  <div class="form-outline mb-4">
+    <%= f.email_field :email, class: "form-control form-control-lg" %>
+    <%= f.label :email, t("view.your_email"), class: "form-label" %>
+  </div>
+
+  <div class="form-outline mb-4">
+    <%= f.text_field :phone, class: "form-control form-control-lg" %>
+    <%= f.label :phone, t("view.your_phone"), class: "form-label" %>
+  </div>
+  
+  <div class="form-outline mb-4">
+    <%= f.text_field :address, id: "form3Example3cg", class: "form-control form-control-lg" %>
+    <%= f.label :address, t("view.your_address"), class: "form-label" %>
+  </div>
+
+  <div class="form-outline mb-4">
+    <%= f.label :date_of_birth, t("view.date_of_birth") %>
+    <%= f.date_select :date_of_birth , as: :date_of_birth, value: f.object.try(:strftime,"%m/%d/%Y"), class: "form-control", start_year: Date.current.year - 100, end_year: Date.current.year %>
+  </div>
+
+  <div class="form-outline mb-4">
+    <%= f.label :gender, t("view.gender") %>
+    <%= f.select :gender, Settings.user.genders, class: "form-control form-control-lg" %>
+  </div>
+
+  <div class="form-outline mb-4">
+    <%= f.label :role, t("view.you_are") %>
+    <%= f.select :role, Settings.user.roles, class: "form-control form-control-lg" %>
+  </div>
+
+  <div class="form-outline mb-4">
+    <%= f.password_field :password, class: "form-control form-control-lg" %>
+    <%= f.label :password, t("view.password"), class: "form-label" %>
+  </div>
+
+  <div class="form-outline mb-4">
+    <%= f.password_field :password_confirmation, class: "form-control form-control-lg" %>
+    <%= f.label :password_confirmation, t("view.repeat_password"), class: "form-label" %>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <%= f.submit t("view.register"), class: "btn btn-success btn-block btn-lg gradient-custom-4 text-body" %>
+  </div>
+<% end %>

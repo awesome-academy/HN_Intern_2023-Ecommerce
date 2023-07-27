@@ -2,8 +2,11 @@ en:
   appname: "appname"
   controller:
     hello: "hello"
-    product:
+    products:
       not_found: "Cannot find product"
+    users:
+      signup:
+        success: "Signup successfully"
   view:
     home: "Home"
     add_to_cart: "Add to cart"
@@ -15,13 +18,33 @@ en:
     back: "Back"
     description: "Description"
     size: "Size"
+    your_name: "Your name"
+    your_email: "Your email"
+    your_phone: "Your phone number"
+    your_address: "Your address"
+    password: "Password"
+    repeat_password: "Repeat your password"
+    register: "Register"
+    signup: "Signup"
+    the_form_contains: "The form contains "
+    error: " errors"
+    create_account: "Create your account"
+    had_account: "Have already an account? "
+    login: "Login"
+    date_of_birth: "Date of birth"
+    gender: "Gender"
+    male: "Male"
+    female: "Female"
+    other: "Other"
+    customer: "Customer"
+    seller: "Seller"
   model:
-    user:
-      sex:
+    users:
+      gender:
         male: "Male"
         female: "Female"
         other: "Other"
-    order:
+    orders:
       status:
         pending: "Pending"
         shipped: "Shipped"

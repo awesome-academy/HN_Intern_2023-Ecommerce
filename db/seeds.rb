@@ -5,8 +5,9 @@ User.create!(
   address: "Hanoi",
   date_of_birth: Date.parse("1990-01-01"),
   gender: 0,
-  activated: true,
   role: 1,
+  password: "123",
+  password_confirmation: "123",
   created_at: Time.now,
   updated_at: Time.now
 )
