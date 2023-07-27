@@ -2,6 +2,8 @@ en:
   appname: "appname"
   controller:
     hello: "hello"
+    product:
+      not_found: "Cannot find product"
   view:
     home: "Home"
     add_to_cart: "Add to cart"
@@ -10,6 +12,9 @@ en:
     cart: "Cart"
     search: "Search"
     menu: "Menu"
+    back: "Back"
+    description: "Description"
+    size: "Size"
   model:
     user:
       sex:
@@ -21,3 +26,12 @@ en:
         pending: "Pending"
         shipped: "Shipped"
         delivered: "Delivered"
+  currency:
+    format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 0      
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "$"

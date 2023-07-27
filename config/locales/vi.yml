@@ -2,6 +2,8 @@ vi:
   appname: "appname"
   controller:
     hello: "Chào"
+    product:
+      not_found: "Không tìm thấy sản phẩm"
   view:
     home: "Trang chủ"
     add_to_cart: "Thêm vào giỏ hàng"
@@ -10,6 +12,9 @@ vi:
     cart: "Giỏ hàng"
     search: "Tìm kiếm"
     menu: "Tùy chọn"
+    back: "Quay lại"
+    description: "Mô tả"
+    size: "Kích cỡ"
   model:
     user:
       sex:
@@ -21,3 +26,12 @@ vi:
         pending: "Đang chờ xác nhận"
         shipped: "Đã được vận chuyển"
         delivered: "Đã tới nơi"
+  currency:
+    format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 0      
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "Đồng"

@@ -9,3 +9,5 @@ value:
 regex:
   email: \A[\w+\-.]+@[a-z\d-]+(\.[a-z]+)*\.[a-z]+\z
   phone: \A[0-9+\-\s()]+\z
+page:
+  items_12: 12

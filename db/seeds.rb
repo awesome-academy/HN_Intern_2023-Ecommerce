@@ -29,10 +29,10 @@ user = User.first
 categories = Category.all
 
 100.times do 
-  des = Faker::Lorem.sentence(word_count: 5)
+  des = Faker::Lorem.sentence(word_count: rand(20..40))
   Product.create!(
     name: Faker::Commerce.product_name,
-    price: 20,
+    price: rand(10..2000),
     description: des,
     quantity_on_stock: 100,
     user_id: user.id,
