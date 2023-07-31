@@ -3,17 +3,17 @@
     <div class="row gy-3">
       <!-- Left elements -->
       <div class="col-lg-2 col-sm-4 col-4">
-        <a href="#" target="_blank" class="float-start">
-          <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="35" />
-        </a>
+        <%= link_to root_path, class: "float-start" do %>
+          <%= image_tag("logo.png", width: 180) %>
+        <% end %>
       </div>
       <!-- Left elements -->
 
       <!-- Center elements -->
       <div class="order-lg-last col-lg-5 col-sm-8 col-8">
         <div class="d-flex float-end">
-          <a href="#" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"><p class="d-md-block mb-0"><%= t "view.sign_in" %></p> </a>
-          <a href="#" class="border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"><p class="d-md-block mb-0"><%= t "view.cart" %></p> </a>
+          <a href="#" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center"><i class="fas fa-user-alt m-1 me-md-2"></i><p class="d-md-block mb-0"><%= t "view.sign_in" %></p> </a>
+          <a href="#" class="border rounded py-1 px-3 nav-link d-flex align-items-center"><i class="fas fa-shopping-cart m-1 me-md-2"></i><p class="d-md-block mb-0"><%= t "view.cart" %></p> </a>
         </div>
       </div>
       <!-- Center elements -->
@@ -24,7 +24,7 @@
           <div class="container mt-4">
             <form class="form-inline my-2 my-lg-0 d-flex">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><%= t "view.search" %></button>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
             </form>
           </div>
         </div>
@@ -95,22 +95,3 @@
   </div>
   <!-- Container wrapper -->
 </nav>
-<!-- Navbar -->
-<!-- Jumbotron -->
-<div class="bg-primary text-white py-5">
-  <div class="container py-5">
-    <h1>
-      Best products & <br />
-      brands in our store
-    </h1>
-    <p>
-      Trendy Products, Factory Prices, Excellent Service
-    </p>
-    <button type="button" class="btn btn-outline-light">
-      Learn more
-    </button>
-    <button type="button" class="btn btn-light shadow-0 text-primary pt-2 border border-white">
-      <span class="pt-1">Purchase now</span>
-    </button>
-  </div>
-</div>

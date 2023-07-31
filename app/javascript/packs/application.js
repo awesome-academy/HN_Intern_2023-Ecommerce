@@ -8,6 +8,8 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "bootstrap"
+import "core-js/stable"
+import "regenerator-runtime/runtime"
 
 require("@rails/ujs").start
 require("turbolinks").start

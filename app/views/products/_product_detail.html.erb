@@ -1,0 +1,60 @@
+<div class="container mt-5 mb-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-10">
+      <div class="card">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="images p-3">
+              <!-- partial needed -->
+              <div class="text-center p-4"> 
+                <%= image_tag "products_test/dress_01.jpg", id: "main-image", width: "250", height: "350" %> 
+              </div>
+              <!-- partial needed -->
+              <div class="thumbnail text-center">
+                <%= image_tag "products_test/dress_02.jpg", class: "minor-image", width: "75" %> 
+                <%= image_tag "products_test/dress_03.jpg", class: "minor-image", width: "75" %> 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="product p-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center"> 
+                  <%= link_to root_path do %>
+                  <span class="ml-1"><%= t "view.back" %></span>
+                  <% end %> 
+                </div> 
+              </div>
+              <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand"><%= @product.category.name %></span>
+                <h5 class="text-uppercase"><%= @product.name %></h5>
+                <div class="price d-flex flex-row align-items-center"> 
+                  <span class="act-price"><%= number_to_currency(@product.price) %></span>
+                  <!-- <div class="ml-2">
+                    <small class="dis-price"><%= @product.price %></small>
+                    <span>40% OFF</span>
+                  </div> -->
+                </div>
+              </div>
+              <span class="h4"><%= t "view.description" %></span>
+              <p class="about">
+                <%= @product.description %>
+              </p>
+              <div class="sizes mt-5">
+                <h6 class="text-uppercase"><%= t "view.size" %></h6> 
+                <label class="radio"> <input type="radio" name="size" value="S" checked> <span>S</span> </label> 
+                <label class="radio"> <input type="radio" name="size" value="M"> <span>M</span> </label> 
+                <label class="radio"> <input type="radio" name="size" value="L"> <span>L</span> </label> 
+                <label class="radio"> <input type="radio" name="size" value="XL"> <span>XL</span> </label> 
+                <label class="radio"> <input type="radio" name="size" value="XXL"> <span>XXL</span> </label>
+              </div>
+              <div class="cart mt-4 align-items-center">
+                <button class="btn btn-danger text-uppercase mr-2 px-4"><%= t ("add_to_cart") %></button> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_pack_tag "change_image" %>
