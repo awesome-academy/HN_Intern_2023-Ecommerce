@@ -7,5 +7,5 @@ digit:
 value:
   number_0: 0
 regex:
-  email: /\A[\w+\-.]+@[a-z\d-]+(\.[a-z]+)*\.[a-z]+\z/i
-  phone: /\A[0-9+\-\s()]+\z/
+  email: \A[\w+\-.]+@[a-z\d-]+(\.[a-z]+)*\.[a-z]+\z
+  phone: \A[0-9+\-\s()]+\z
