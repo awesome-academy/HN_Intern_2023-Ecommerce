@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_31_041312) do
+ActiveRecord::Schema.define(version: 2023_08_02_020905) do
+
+  create_table "cart_items", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "product_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_cart_items_on_product_id"
+    t.index ["user_id"], name: "index_cart_items_on_user_id"
+  end
 
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
@@ -81,6 +91,8 @@ ActiveRecord::Schema.define(version: 2023_07_31_041312) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "cart_items", "products"
+  add_foreign_key "cart_items", "users"
   add_foreign_key "order_histories", "orders"
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"

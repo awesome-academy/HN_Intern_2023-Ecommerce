@@ -6,11 +6,13 @@ digit:
   length_1000: 1000
 value:
   number_0: 0
+  number_1: 1
 regex:
   email: \A[\w+\-.]+@[a-z\d-]+(\.[a-z]+)*\.[a-z]+\z
   phone: \A[0-9+\-\s()]+\z
 page:
   items_12: 12
+  items_5: 5
 user:
   roles:
   - ["Customer", "customer"]
@@ -19,3 +21,8 @@ user:
   - ["Male", "male"]
   - ["Female", "female"]
   - ["Other", "other"]
+cart_item:
+  update:
+    option:
+      minus: "minus"
+      plus: "plus"

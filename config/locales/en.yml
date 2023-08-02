@@ -11,6 +11,16 @@ en:
       login:
         success: "Login successfully"
         fail: "Wrong email or password"
+    cart_items:
+      update:
+        success: "Update cart item successfully"
+        fail: "Update cart item fail"
+        quantity_invalid: "Quantity is invalid"
+      added:
+        success: "Cart item added to cart"
+        fail: "Cart item added to cart fail"
+      login_needed: "You have to login first to use cart"
+      not_found: "Cannot find cart item"
   view:
     home: "Home"
     add_to_cart: "Add to cart"
@@ -43,6 +53,10 @@ en:
     customer: "Customer"
     seller: "Seller"
     logout: "Logout"
+    sumary: "Sumary"
+    items: "Items"
+    total_amount: "Total amount"
+    checkout: "Go to checkout"
   model:
     users:
       gender:

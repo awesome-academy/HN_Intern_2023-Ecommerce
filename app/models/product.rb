@@ -2,6 +2,7 @@ class Product < ApplicationRecord
   belongs_to :user
   belongs_to :category
   has_many :order_items, dependent: :destroy
+  has_many :cart_items, dependent: :destroy
   has_one_attached :image
 
   validates :name, :price, :description, :quantity_on_stock, presence: true

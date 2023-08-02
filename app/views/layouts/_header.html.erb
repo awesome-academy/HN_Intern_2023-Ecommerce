@@ -27,7 +27,10 @@
               <p class="d-md-block mb-0"><%= t "view.logout" %></p>
             <% end %>
           <% end %>
-          <a href="#" class="border rounded py-1 px-3 nav-link d-flex align-items-center"><i class="fas fa-shopping-cart m-1 me-md-2"></i><p class="d-md-block mb-0"><%= t "view.cart" %></p> </a>
+          <%= link_to cart_path, class: "border rounded py-1 px-3 nav-link d-flex align-items-center" do %>
+            <i class="fas fa-shopping-cart m-1 me-md-2"></i>
+            <p class="d-md-block mb-0"><%= t "view.cart" %></p>
+          <% end %>
         </div>
       </div>
       <!-- Center elements -->

@@ -11,5 +11,12 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
+
+  get "/cart", to: "cart_items#index"
+  post "/add_to_cart", to: "cart_items#create"
+  patch "/update_quantity", to: "cart_items#update", as: :update_quantity
+
   resources :users, only: %i(new create show)
+  resources :products, only: %i(index show)
+  resources :cart_items, only: %i(index create update destroy)
 end
