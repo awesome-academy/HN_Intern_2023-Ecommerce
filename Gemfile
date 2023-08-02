@@ -36,6 +36,7 @@ group :development, :test do
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
 end
+gem "bcrypt", "3.1.13"
 gem "bootstrap", "~> 5.3.0.alpha3"
 gem "config"
 gem "faker"

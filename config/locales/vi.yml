@@ -2,8 +2,11 @@ vi:
   appname: "appname"
   controller:
     hello: "Chào"
-    product:
+    products:
       not_found: "Không tìm thấy sản phẩm"
+    users:
+      signup:
+        success: "Đăng ký tài khoản thành công"
   view:
     home: "Trang chủ"
     add_to_cart: "Thêm vào giỏ hàng"
@@ -15,13 +18,33 @@ vi:
     back: "Quay lại"
     description: "Mô tả"
     size: "Kích cỡ"
+    your_name: "Họ và tên"
+    your_email: "Email"
+    your_phone: "Số điện thoại"
+    your_address: "Địa chỉ"
+    password: "Mật khẩu"
+    repeat_password: "Nhập lại mật khẩu"
+    register: "Đăng ký"
+    signup: "Đăng ký"
+    the_form_contains: "Mẫu nhập chứa "
+    error: " Lỗi"
+    create_account: "Tạo tài khoản của bạn"
+    had_account: "Bản đã có tài khoản ? "
+    login: "Đăng nhập"
+    date_of_birth: "Ngày sinh"
+    gender: "Giới tính"
+    male: "Nam"
+    female: "Nữ"
+    other: "Khác"
+    customer: "Khác hàng"
+    seller: "Người bán hàng"
   model:
-    user:
-      sex:
+    users:
+      gender:
         male: "Nam"
         female: "Nữ"
         other: "Khác"
-    order:
+    orders:
       status:
         pending: "Đang chờ xác nhận"
         shipped: "Đã được vận chuyển"

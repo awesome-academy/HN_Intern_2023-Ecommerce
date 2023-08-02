@@ -1,4 +1,9 @@
 class User < ApplicationRecord
+  before_save :downcase_email
+
+  ATTRIBUTES = [:name, :email, :phone, :address, :date_of_birth, :gender,
+                :role, :password, :password_confirmation].freeze
+
   enum gender: {
     male: 0,
     female: 1,
@@ -13,8 +18,8 @@ class User < ApplicationRecord
   has_many :products, dependent: :destroy
   has_many :orders, dependent: :nullify
 
-  validates :name, :email, :phone, :address, :date_of_birth,
-            :gender, :activated, :role, presence: true
+  validates :name, :email, :phone, :address, :date_of_birth, :gender, :role,
+            :password, presence: true
   validates :email, uniqueness: true
 
   validates :name, length: {maximum: Settings.digit.length_60}
@@ -25,6 +30,13 @@ class User < ApplicationRecord
   validates :phone, format: {with: /#{Settings.regex.phone}/}
 
   validates :gender, inclusion: {in: User.genders.keys}
-  validates :activated, inclusion: {in: [true, false]}
   validates :role, inclusion: {in: User.roles.keys}
+
+  has_secure_password
+
+  private
+
+  def downcase_email
+    email.downcase!
+  end
 end
