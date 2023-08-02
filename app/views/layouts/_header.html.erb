@@ -12,9 +12,20 @@
       <!-- Center elements -->
       <div class="order-lg-last col-lg-5 col-sm-8 col-8">
         <div class="d-flex float-end">
-          <%= link_to signup_path, class: "me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" do %>
-            <i class="fas fa-user-alt m-1 me-md-2"></i>
-            <p class="d-md-block mb-0"><%= t "view.sign_in" %></p>
+          <% if !logged_in? %>
+            <%= link_to signup_path, class: "me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" do %>
+              <i class="fas fa-user-alt m-1 me-md-2"></i>
+              <p class="d-md-block mb-0"><%= t "view.sign_in" %></p>
+            <% end %>
+            <%= link_to login_path, class: "me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" do %>
+              <i class="fas fa-sign-in m-1 me-md-2"></i>
+              <p class="d-md-block mb-0"><%= t "view.login" %></p>
+            <% end %>
+          <% else %>
+            <%= link_to logout_path, method: :delete, class: "me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" do %>
+              <i class="fas fa-sign-out m-1 me-md-2"></i>
+              <p class="d-md-block mb-0"><%= t "view.logout" %></p>
+            <% end %>
           <% end %>
           <a href="#" class="border rounded py-1 px-3 nav-link d-flex align-items-center"><i class="fas fa-shopping-cart m-1 me-md-2"></i><p class="d-md-block mb-0"><%= t "view.cart" %></p> </a>
         </div>

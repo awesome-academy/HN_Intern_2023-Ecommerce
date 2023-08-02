@@ -1,0 +1,29 @@
+<%= form_for :session, url: login_path do |f| %>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <%= f.label :email, t("view.email"), class: "form-label" %>
+    <%= f.email_field :email, class: "form-control form-control-lg", placeholder: "Enter a valid email address" %>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-3">
+    <%= f.label :password, t("view.password"), class: "form-label" %>
+    <%= f.password_field :password, class: "form-control form-control-lg", placeholder: "Enter password" %>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center">
+    <!-- Checkbox -->
+    <div class="form-check mb-0">
+      <%= f.check_box :remember_me, class: "form-check-input me-2" %>
+      <label class="form-check-label">
+        <%= t "view.remember_me" %>
+      </label>
+    </div>
+    <a href="#!" class="text-body"><%= t "view.forgot_password" %></a>
+  </div>
+
+  <div class="text-center text-lg-start mt-4 pt-2">
+    <%= f.submit t("view.login"), class: "btn btn-primary btn-lg", style: "padding-left: 2.5rem; padding-right: 2.5rem;" %>
+    <p class="small fw-bold mt-2 pt-1 mb-0"><%= t "view.dont_have_account" %> <%= link_to t("view.register"), "#!", class: "link-danger" %></p>
+  </div>
+<% end %>

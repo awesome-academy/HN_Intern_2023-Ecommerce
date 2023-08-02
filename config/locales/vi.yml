@@ -7,6 +7,10 @@ vi:
     users:
       signup:
         success: "Đăng ký tài khoản thành công"
+    sessions:
+      login:
+        success: "Đăng nhập thành công"
+        fail: "Sai email hoặc mật khẩu"
   view:
     home: "Trang chủ"
     add_to_cart: "Thêm vào giỏ hàng"
@@ -38,6 +42,7 @@ vi:
     other: "Khác"
     customer: "Khác hàng"
     seller: "Người bán hàng"
+    logout: "Đăng xuất"
   model:
     users:
       gender:
