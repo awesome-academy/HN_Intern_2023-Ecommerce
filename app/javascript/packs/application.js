@@ -10,6 +10,7 @@ import "channels"
 import "bootstrap"
 import "core-js/stable"
 import "regenerator-runtime/runtime"
+import "jquery";
 
 require("@rails/ujs").start
 require("turbolinks").start

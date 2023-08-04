@@ -17,6 +17,7 @@ class User < ApplicationRecord
 
   has_many :products, dependent: :destroy
   has_many :orders, dependent: :nullify
+  has_many :cart_items, dependent: :destroy
 
   validates :name, :email, :phone, :address, :date_of_birth, :gender, :role,
             :password, presence: true

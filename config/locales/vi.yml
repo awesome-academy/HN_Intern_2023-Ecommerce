@@ -11,6 +11,16 @@ vi:
       login:
         success: "Đăng nhập thành công"
         fail: "Sai email hoặc mật khẩu"
+    cart_items:
+      update:
+        success: "Cập nhật vật phẩm thành công"
+        fail: "Cập nhật vật phẩm thất bại"
+        quantity_invalid: "Số lượng không hợp lệ"
+      added:
+        success: "Vật phẩm đã được thêm vào giỏ hàng"
+        fail: "Vật phẩm thêm vào giỏ hàng thất bại"
+      login_needed: "Bạn cần phải đăng nhập để sử dụng giỏ hàng"
+      not_found: "Không thể tìm thấy sản phẩm"
   view:
     home: "Trang chủ"
     add_to_cart: "Thêm vào giỏ hàng"
@@ -43,6 +53,10 @@ vi:
     customer: "Khác hàng"
     seller: "Người bán hàng"
     logout: "Đăng xuất"
+    sumary: "Tóm tắt"
+    items: "Vật phẩm"
+    total_amount: "Thành tiền"
+    checkout: "Chuyển tới thanh toán"
   model:
     users:
       gender:

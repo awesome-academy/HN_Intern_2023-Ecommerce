@@ -7,7 +7,9 @@
       <% end %>
       <p class="card-text h3"> <%=number_to_currency(product.price) %></p>
       <div class="card-footer d-flex justify-content-center align-items-end pt- px-0 pb-1 mt-auto">
-        <a href="#" class="btn btn-primary shadow-0 me-1"><%= t "view.add_to_cart" %></a>
+        <%= link_to add_to_cart_path(cart_item: { quantity: 1, product_id: product.id, user_id: current_user&.id }), method: :post, class: "btn btn-primary shadow-0 me-1" do %>
+          <%= t "view.add_to_cart" %>
+        <% end %>
       </div>
     </div>
   </div>

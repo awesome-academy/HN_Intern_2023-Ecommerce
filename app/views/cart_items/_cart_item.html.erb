@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+    <!-- Image -->
+    <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+      <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp"
+        class="w-100" alt="Blue Jeans Jacket" />
+      <a href="#!">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+      </a>
+    </div>
+    <!-- Image -->
+  </div>
+
+  <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+    <!-- Data -->
+    <p><strong><%=cart_item.product_name %></strong></p>
+    <p>Color: blue</p>
+    <p>Size: M</p>
+    <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
+      title="Remove item">
+      <i class="fas fa-trash"></i>
+    </button>
+    <!-- Data -->
+  </div>
+  <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+    <!-- Quantity -->
+    <div class="d-flex mb-4" style="max-width: 300px">
+      <%= link_to update_quantity_path(id: cart_item.id, option: Settings.cart_item.update.option.minus), 
+                  method: :patch,  
+                  onclick: "this.parentNode.querySelector('input[type=number]').stepDown()", 
+                  class: "btn btn-primary px-3 ms-2" do %>
+        <i class="fas fa-minus"></i>
+      <% end %>
+
+
+      <div class="form-outline">
+        <input id="cart-item-#{cart_item.id}" min="1" name="quantity" value="<%= cart_item.quantity %>" type="number" class="form-control" />
+      </div>
+
+      <%= link_to update_quantity_path(id: cart_item.id, option: Settings.cart_item.update.option.plus), 
+                  method: :patch, 
+                  onclick: "this.parentNode.querySelector('input[type=number]').stepUp()", 
+                  class: "btn btn-primary px-3 ms-2" do %>
+        <i class="fas fa-plus"></i>
+      <% end %>
+    </div>
+    <!-- Quantity -->
+
+    <!-- Price -->
+    <p class="text-start text-md-center">
+      <strong><%= number_to_currency(cart_item.product_price) %> x <%= cart_item.quantity %> = <%= number_to_currency(cart_item.product_price * cart_item.quantity) %></strong>
+    </p>
+    <!-- Price -->
+  </div>
+</div>
+<!-- Single item -->
+
+<hr class="my-4" />
