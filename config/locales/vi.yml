@@ -4,6 +4,8 @@ vi:
     hello: "Chào"
     products:
       not_found: "Không tìm thấy sản phẩm"
+      create:
+        success: "Đăng sản phẩm thành công"
     users:
       signup:
         success: "Đăng ký tài khoản thành công"
@@ -16,6 +18,7 @@ vi:
         success: "Cập nhật vật phẩm thành công"
         fail: "Cập nhật vật phẩm thất bại"
         quantity_invalid: "Số lượng không hợp lệ"
+        out_of_stock: "Số lượng sản phẩm không đủ"
       added:
         success: "Vật phẩm đã được thêm vào giỏ hàng"
         fail: "Vật phẩm thêm vào giỏ hàng thất bại"
@@ -57,6 +60,13 @@ vi:
     items: "Vật phẩm"
     total_amount: "Thành tiền"
     checkout: "Chuyển tới thanh toán"
+    product_name: "Tên sản phẩm"
+    product_price: "Giá sản phẩm"
+    product_category: "Phân loại"
+    product_description: "Mô tả"
+    product_quantity: "Số lượng trong kho"
+    product_image: "Đăng tải hình ảnh"
+    product_upload: "Đăng"
   model:
     users:
       gender:

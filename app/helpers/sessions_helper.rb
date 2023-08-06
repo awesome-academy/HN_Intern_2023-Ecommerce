@@ -15,4 +15,8 @@ module SessionsHelper
   def logged_in?
     current_user.present?
   end
+
+  def is_seller?
+    current_user.role == Settings.user.roles[1][1]
+  end
 end

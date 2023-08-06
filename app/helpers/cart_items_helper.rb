@@ -1,6 +1,6 @@
 module CartItemsHelper
   def cart_item_existed? product_id
-    CartItem.exists?(product_id: product_id)
+    current_user.cart_items.exists?(product_id: product_id)
   end
 
   def get_cart_items_price

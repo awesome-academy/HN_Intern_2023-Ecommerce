@@ -39,32 +39,3 @@ Category.create!(
   created_at: Time.now,
   updated_at: Time.now
 )
-
-seller = User.first
-customer = User.last
-categories = Category.all
-
-100.times do 
-  des = Faker::Lorem.sentence(word_count: rand(20..40))
-  Product.create!(
-    name: Faker::Commerce.product_name,
-    price: rand(10..2000),
-    description: des,
-    quantity_on_stock: 100,
-    user_id: seller.id,
-    category_id: categories.sample.id,
-    created_at: Time.now,
-    updated_at: Time.now
-  )
-end
-
-products = Product.all
-5.times do
-  CartItem.create!(
-    quantity: 1,
-    user_id: customer.id,
-    product_id: products.sample.id,
-    created_at: Time.now,
-    updated_at: Time.now
-  )
-end

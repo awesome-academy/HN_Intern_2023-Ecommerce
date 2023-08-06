@@ -36,12 +36,15 @@ group :development, :test do
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
 end
+gem "active_storage_validations", "0.8.2"
 gem "bcrypt", "3.1.13"
 gem "bootstrap", "~> 5.3.0.alpha3"
 gem "config"
 gem "faker"
 gem "figaro", "~> 1.1", ">= 1.1.1"
+gem "image_processing", "~> 1.0"
 gem "jquery-rails"
+gem "mini_magick", "4.9.5"
 gem "pagy"
 gem "pry-rails", group: :development
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

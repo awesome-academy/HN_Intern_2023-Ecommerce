@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   
   get "/products", to: "products#index", as: "products"  
   get "/products/:id", to: "products#show", as: "product"
+  get "/upload_product", to: "products#new"
 
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
@@ -17,6 +18,6 @@ Rails.application.routes.draw do
   patch "/update_quantity", to: "cart_items#update", as: :update_quantity
 
   resources :users, only: %i(new create show)
-  resources :products, only: %i(index show)
+  resources :products
   resources :cart_items, only: %i(index create update destroy)
 end
