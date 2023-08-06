@@ -7,13 +7,13 @@
             <div class="images p-3">
               <!-- partial needed -->
               <div class="text-center p-4"> 
-                <%= image_tag "products_test/dress_01.jpg", id: "main-image", width: "250", height: "350" %> 
+                <%= image_tag @product.image, id: "main-image", width: "250", height: "350" %> 
               </div>
               <!-- partial needed -->
-              <div class="thumbnail text-center">
+              <!-- <div class="thumbnail text-center">
                 <%= image_tag "products_test/dress_02.jpg", class: "minor-image", width: "75" %> 
                 <%= image_tag "products_test/dress_03.jpg", class: "minor-image", width: "75" %> 
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="col-md-6">
@@ -39,6 +39,7 @@
               <p class="about">
                 <%= @product.description %>
               </p>
+              <span class="h4"><%= t "view.quantity_on_stock" %>: <%= @product.quantity_on_stock %></span>
               <div class="sizes mt-5">
                 <h6 class="text-uppercase"><%= t "view.size" %></h6> 
                 <label class="radio"> <input type="radio" name="size" value="S" checked> <span>S</span> </label> 
@@ -48,7 +49,9 @@
                 <label class="radio"> <input type="radio" name="size" value="XXL"> <span>XXL</span> </label>
               </div>
               <div class="cart mt-4 align-items-center">
-                <button class="btn btn-danger text-uppercase mr-2 px-4"><%= t ("add_to_cart") %></button> 
+                <%= link_to add_to_cart_path(cart_item: { quantity: 1, product_id: @product.id, user_id: current_user&.id }), method: :post, class: "btn btn-primary shadow-0 me-1" do %>
+                  <%= t "view.add_to_cart" %>
+                <% end %>
               </div>
             </div>
           </div>

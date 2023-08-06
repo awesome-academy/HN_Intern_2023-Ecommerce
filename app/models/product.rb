@@ -5,6 +5,8 @@ class Product < ApplicationRecord
   has_many :cart_items, dependent: :destroy
   has_one_attached :image
 
+  ATTRIBUTES = [:name, :price, :description, :quantity_on_stock, :user_id,
+:category_id, :image].freeze
   validates :name, :price, :description, :quantity_on_stock, presence: true
 
   validates :price,

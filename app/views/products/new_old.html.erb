@@ -1,0 +1,58 @@
+
+<% provide :title, t("view.upload_product") %>
+
+<%= render "layouts/header" %>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<form class="form-horizontal">
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_name">PRODUCT NAME</label>  
+  <div class="col-md-4">
+  <input id="product_name" name="product_name" placeholder="PRODUCT NAME" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="percentage_discount">PRICE</label>  
+  <div class="col-md-4">
+  <input id="price" name="percentage_discount" placeholder="PERCENTAGE DISCOUNT" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_name_fr">PRODUCT DESCRIPTION</label>  
+  <div class="col-md-4">
+  <input id="product_name" name="product_name_fr" placeholder="PRODUCT DESCRIPTION" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="product_categorie">PRODUCT CATEGORY</label>
+  <div class="col-md-4">
+    <select id="product_categorie" name="product_categorie" class="form-control">
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="available_quantity">QUANTITY ON STOCK</label>  
+  <div class="col-md-4">
+  <input id="available_quantity" name="available_quantity" placeholder="AVAILABLE QUANTITY" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+<span>
+  <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
+</span>
+
+</form>
